@@ -19,7 +19,7 @@ module.exports = {
         lightBrown: '#915907',
         lightOrange: '#E7A33E',
         lightRed: '#F5987E',
-        whitesmoke: '#F3F2EF',
+        grayLight:'#EEF3F7'
       },
     },
   },

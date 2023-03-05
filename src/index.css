@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: OpenSans Regular;
+  background-color: #F3F2EE;
 }
 
 @font-face {
@@ -39,3 +44,4 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
