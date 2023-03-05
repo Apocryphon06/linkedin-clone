@@ -11,7 +11,9 @@ function PageNotFound() {
       <p className="text-2xl font-bold text-[#a3a3a3]  pt-[10px]">
         Click{" "}
         <Link to="/">
-          <span className="hover:underline cursor-pointer text-black">here</span>
+          <span className="hover:underline cursor-pointer text-black">
+            here
+          </span>
         </Link>{" "}
         to return home
       </p>

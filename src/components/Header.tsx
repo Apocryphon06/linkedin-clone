@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Label from "./Label";
 
 function Header() {
   const [active, setActive] = useState("mynetwork");
@@ -69,7 +70,8 @@ function Header() {
           />
           <path d="M20 2H17V5.2L20 7.1V2Z" fill="black" fill-opacity="0.9" />
         </svg>
-        <p className="text-xs font-semibold">Home</p>
+        {/* <p className="text-xs font-semibold">Home</p> */}
+        <Label title="Home" />
       </div>
     );
   };
@@ -95,7 +97,8 @@ function Header() {
             // fill-opacity="0.6"
           />
         </svg>
-        <p className="text-xs font-semibold">My Network</p>
+        {/* <p className="text-xs font-semibold">My Network</p> */}
+        <Label title="My Network" />
       </div>
     );
   };
@@ -122,7 +125,8 @@ function Header() {
           />
         </svg>
 
-        <p className="text-xs font-semibold">Jobs</p>
+        {/* <p className="text-xs font-semibold">Jobs</p> */}
+        <Label title="Jobs" />
       </div>
     );
   };
@@ -149,7 +153,8 @@ function Header() {
           />
         </svg>
 
-        <p className="text-xs font-semibold">Messaging</p>
+        {/* <p className="text-xs font-semibold">Messaging</p> */}
+        <Label title="Messaging" />
       </div>
     );
   };
@@ -176,7 +181,8 @@ function Header() {
           />
         </svg>
 
-        <p className="text-xs font-semibold">Notifications</p>
+        {/* <p className="text-xs font-semibold">Notifications</p> */}
+        <Label title="Notifications" />
       </div>
     );
   };
@@ -190,7 +196,8 @@ function Header() {
           className="w-[24px] h-[24px] rounded-full"
         />
 
-        <p className="text-xs font-semibold">Me</p>
+        {/* <p className="text-xs font-semibold">Me</p> */}
+        <Label title="Me" />
       </div>
     );
   };
@@ -217,19 +224,20 @@ function Header() {
           />
         </svg>
 
-        <p className="text-xs font-semibold">Work</p>
+        {/* <p className="text-xs font-semibold">Work</p> */}
+        <Label title="Work" />
       </div>
     );
   };
 
   return (
-    <div className=" py-2 w-full bg-white px-[150px] flex flex-row items-center justify-between">
-      <div className=" flex flex-row items-center gap-2">
+    <div className=" py-2 w-full bg-white lg:px-[150px] px-2 flex flex-row items-center lg:justify-between justify-around">
+      <div className=" flex flex-row items-center lg:gap-2">
         {/* Logo */}
         <Linkedin />
 
         {/* input wrapper */}
-        <div className="flex flex-row p-1 items-center gap-1 bg-grayLight rounded-md w-[280px] pl-3">
+        <div className="lg:flex hidden flex-row p-1 items-center gap-1 bg-grayLight rounded-md w-[280px] pl-3 ">
           <SearchIcon size="w-[18px] h-[18px] " />
           <input
             placeholder="Search"
