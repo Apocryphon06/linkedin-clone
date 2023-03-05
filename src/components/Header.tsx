@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
+  const [active, setActive] = useState("mynetwork");
+
   const SearchIcon = ({ size }: any) => {
     return (
       <div className={`${size}`}>
@@ -46,7 +49,12 @@ function Header() {
 
   const Home = () => {
     return (
-      <div className="flex flex-col justify-center items-center ">
+      <div
+        onClick={() => setActive("home")}
+        className={`flex flex-col justify-center items-center cursor-pointer ${
+          active === "home" ? "" : "opacity-60"
+        }`}
+      >
         <svg
           width="24"
           height="24"
@@ -57,7 +65,7 @@ function Header() {
           <path
             d="M23 9V11H21V18C21 19.7 19.7 21 18 21H14V15H10V21H6C4.3 21 3 19.7 3 18V11H1V9L12 2L23 9Z"
             fill="black"
-            fill-opacity="0.9"
+            // fill-opacity="0.6"
           />
           <path d="M20 2H17V5.2L20 7.1V2Z" fill="black" fill-opacity="0.9" />
         </svg>
@@ -68,7 +76,12 @@ function Header() {
 
   const MyNetwork = () => {
     return (
-      <div className="flex flex-col justify-center items-center ">
+      <div
+        onClick={() => setActive("mynetwork")}
+        className={`flex flex-col justify-center items-center cursor-pointer ${
+          active === "mynetwork" ? "" : "opacity-60"
+        }`}
+      >
         <svg
           width="24"
           height="24"
@@ -89,7 +102,12 @@ function Header() {
 
   const Jobs = () => {
     return (
-      <div className="flex flex-col justify-center items-center ">
+      <div
+        onClick={() => setActive("jobs")}
+        className={`flex flex-col justify-center items-center cursor-pointer ${
+          active === "jobs" ? "" : "opacity-60"
+        }`}
+      >
         <svg
           width="24"
           height="24"
@@ -111,7 +129,12 @@ function Header() {
 
   const Messaging = () => {
     return (
-      <div className="flex flex-col justify-center items-center ">
+      <div
+        onClick={() => setActive("messages")}
+        className={`flex flex-col justify-center items-center cursor-pointer ${
+          active === "messages" ? "" : "opacity-60"
+        }`}
+      >
         <svg
           width="24"
           height="24"
@@ -133,7 +156,12 @@ function Header() {
 
   const Notifications = () => {
     return (
-      <div className="flex flex-col justify-center items-center ">
+      <div
+        onClick={() => setActive("notifications")}
+        className={`flex flex-col justify-center items-center cursor-pointer ${
+          active === "notifications" ? "" : "opacity-60"
+        }`}
+      >
         <svg
           width="24"
           height="24"
@@ -169,7 +197,12 @@ function Header() {
 
   const Work = () => {
     return (
-      <div className="flex flex-col justify-center items-center ">
+      <div
+        onClick={() => setActive("work")}
+        className={`flex flex-col justify-center items-center cursor-pointer ${
+          active === "work" ? "" : "opacity-60"
+        }`}
+      >
         <svg
           width="24"
           height="24"
@@ -206,13 +239,33 @@ function Header() {
       </div>
 
       <div className="flex flex-row items-center gap-6">
-        <Home />
-        <MyNetwork />
-        <Jobs />
-        <Messaging />
-        <Notifications />
-        <Account />
-        <Work />
+        <Link to="/">
+          <Home />
+        </Link>
+
+        <Link to="/mynetwork">
+          <MyNetwork />
+        </Link>
+
+        <Link to="/jobs">
+          <Jobs />
+        </Link>
+
+        <Link to="/messages">
+          <Messaging />
+        </Link>
+
+        <Link to="/notifications">
+          <Notifications />
+        </Link>
+
+        <Link to="/account">
+          <Account />
+        </Link>
+
+        <Link to="/work">
+          <Work />
+        </Link>
       </div>
     </div>
   );
