@@ -231,7 +231,7 @@ function Header() {
   };
 
   return (
-    <div className=" py-2 w-full bg-white lg:px-[150px] px-2 flex flex-row items-center lg:justify-between justify-around">
+    <div className="fixed z-20 py-2 w-full bg-white lg:px-[150px] px-2 flex flex-row items-center lg:justify-between justify-around">
       <div className=" flex flex-row items-center lg:gap-2">
         {/* Logo */}
         <Linkedin />
@@ -241,12 +241,14 @@ function Header() {
           <SearchIcon size="w-[18px] h-[18px] " />
           <input
             placeholder="Search"
-            className="outline-none bg-grayLight text-sm p-1 placeholder:font-bold placeholder:text-gray"
+            className="outline-none bg-grayLight text-sm p-1 placeholder:font-sansSemibold placeholder:text-gray place"
           />
         </div>
       </div>
 
       <div className="flex flex-row items-center gap-6">
+
+        
         <Link to="/">
           <Home />
         </Link>
