@@ -12,7 +12,7 @@ import hashtag from "../assets/icons/hashtag.svg";
 
 import newsletter from "../assets/icons/newsletter.svg";
 import pages from "../assets/icons/pages.svg";
-import Input from "./Input";
+// import Input from "./Input";
 
 const network = [
   {
@@ -127,7 +127,7 @@ function ManageNetwork() {
         <input
           type="email"
           value="hrithikchandrashekar@gmail.com"
-          className="outline-linkedinBlue text-[14px] rounded-md w-full bg-none border p-2 py-1 border-gray mb-[10px]"
+          className="outline-linkedinBlue text-sm rounded-md w-full bg-none border p-2 py-1 border-gray mb-[10px]"
         />
         {/* <Input type="email" value="hrithikchandrashekar@gmail.com" /> */}
         <Button label="Continue" />
