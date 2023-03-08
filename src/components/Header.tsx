@@ -1,9 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Label from "./Label";
 
 function Header() {
-  const [active, setActive] = useState("mynetwork");
+  const [active, setActive] = useState("/");
+  const location = useLocation();
+  console.log(location,'location url')
+
+  useEffect(()=>{
+    setActive(location.pathname)
+  },[])
+  
 
   const SearchIcon = ({ size }: any) => {
     return (
@@ -51,9 +58,9 @@ function Header() {
   const Home = () => {
     return (
       <div
-        onClick={() => setActive("home")}
+        onClick={() => setActive("/")}
         className={`flex flex-col justify-center items-center cursor-pointer ${
-          active === "home" ? "" : "opacity-60"
+          active === "/" ? "" : "opacity-60"
         }`}
       >
         <svg
@@ -79,9 +86,9 @@ function Header() {
   const MyNetwork = () => {
     return (
       <div
-        onClick={() => setActive("mynetwork")}
+        onClick={() => setActive("/mynetwork")}
         className={`flex flex-col justify-center items-center cursor-pointer ${
-          active === "mynetwork" ? "" : "opacity-60"
+          active === "/mynetwork" ? "" : "opacity-60"
         }`}
       >
         <svg
@@ -106,9 +113,9 @@ function Header() {
   const Jobs = () => {
     return (
       <div
-        onClick={() => setActive("jobs")}
+        onClick={() => setActive("/jobs")}
         className={`flex flex-col justify-center items-center cursor-pointer ${
-          active === "jobs" ? "" : "opacity-60"
+          active === "/jobs" ? "" : "opacity-60"
         }`}
       >
         <svg
@@ -134,9 +141,9 @@ function Header() {
   const Messaging = () => {
     return (
       <div
-        onClick={() => setActive("messages")}
+        onClick={() => setActive("/messages")}
         className={`flex flex-col justify-center items-center cursor-pointer ${
-          active === "messages" ? "" : "opacity-60"
+          active === "/messages" ? "" : "opacity-60"
         }`}
       >
         <svg
@@ -162,9 +169,9 @@ function Header() {
   const Notifications = () => {
     return (
       <div
-        onClick={() => setActive("notifications")}
+        onClick={() => setActive("/notifications")}
         className={`flex flex-col justify-center items-center cursor-pointer ${
-          active === "notifications" ? "" : "opacity-60"
+          active === "/notifications" ? "" : "opacity-60"
         }`}
       >
         <svg
@@ -205,9 +212,9 @@ function Header() {
   const Work = () => {
     return (
       <div
-        onClick={() => setActive("work")}
+        onClick={() => setActive("/work")}
         className={`flex flex-col justify-center items-center cursor-pointer ${
-          active === "work" ? "" : "opacity-60"
+          active === "/work" ? "" : "opacity-60"
         }`}
       >
         <svg
@@ -231,7 +238,7 @@ function Header() {
   };
 
   return (
-    <div className="fixed z-20 py-2 w-full bg-white lg:px-[150px] px-2 flex flex-row items-center lg:justify-between justify-around">
+    <div className="fixed shadow-md z-20 py-2 w-full bg-white lg:px-[150px] px-2 flex flex-row items-center lg:justify-between justify-around">
       <div className=" flex flex-row items-center lg:gap-2">
         {/* Logo */}
         <Linkedin />

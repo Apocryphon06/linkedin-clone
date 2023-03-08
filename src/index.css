@@ -7,6 +7,10 @@ body {
   background-color: #F3F2EE;
 }
 
+.bgHover:hover{
+  background-color: rgba(112,181,249,0.2);
+}
+
 @font-face {
   font-family: 'OpenSans Regular';
   src: url('./assets/fonts/OpenSans-Regular.ttf') format('truetype');

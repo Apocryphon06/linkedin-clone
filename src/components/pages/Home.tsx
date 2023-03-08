@@ -1,14 +1,15 @@
 import News from "../News";
+import Feed from "../Feed";
 import ProfileCard from "../ProfileCard";
+
 
 function Home() {
   return (
-    <div className="grid grid-flow-col items-start justify-center gap-[27px] m-auto pt-[80px]">
+    <div className="grid grid-flow-col items-start justify-center gap-[27px] m-auto lg:pt-[70px] pt-[50px]">
       {/* Profile info card & Recents */}
       <ProfileCard />
-      <div className="lg:w-[570px] w-screen bg-white rounded-lg shadow-md h-[100vh]">
-        <p>Feeds</p>
-      </div>
+      {/* Feed */}
+      <Feed/>
       {/* Linkedin News & Explore Opportunity Ad Card */}
       <News />
     </div>

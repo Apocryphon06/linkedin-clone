@@ -143,7 +143,7 @@ function ProfileCard() {
             </div>
           </div>
 
-          <div className="border-b border-grayLight py-4 hover:bg-grayLight cursor-pointer">
+          <div className=" py-4 hover:bg-grayLight cursor-pointer">
             <div className="flex gap-2 items-center px-2">
               <BookmarkIcon />
               <p className="text-xs font-sansBold">My Items</p>
