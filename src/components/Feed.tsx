@@ -44,7 +44,7 @@ function Feed() {
             </p>
           </div>
           <img
-            src={`https://source.unsplash.com/random/?programming`}
+            src={`https://source.unsplash.com/random/?programming?id=${Math.random()*10}`}
             alt="feed_img"
           />
 

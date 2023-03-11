@@ -1,7 +1,6 @@
 import Button from "../Button";
 import ManageNetwork from "../ManageNetwork";
-
-// import connect from '../../assets/icons/connect.svg'
+import Card from "../Card";
 
 function MyNetwork() {
   return (
@@ -21,7 +20,11 @@ function MyNetwork() {
             <div className="p-4 border-t border-grayLight">
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row items-center lg:gap-5 gap-2">
-                  <img src={`https://picsum.photos/200?id=${Math.random()*10}`} alt="invite" className="lg:w-[70px] w-[50px] lg:h-[70px] h-[50px] rounded-full cursor-pointer bg-gray" />
+                  <img
+                    src={`https://picsum.photos/200?id=${Math.random() * 10}`}
+                    alt="invite"
+                    className="lg:w-[70px] w-[50px] lg:h-[70px] h-[50px] rounded-full cursor-pointer bg-gray"
+                  />
                   <div>
                     <p className="text-base font-sansSemibold">
                       Nishchal Chandrashekar
@@ -46,7 +49,7 @@ function MyNetwork() {
           ))}
         </div>
 
-        <div className="bg-white rounded-lg shadow-md mt-[10px]">
+        <div className="bg-white rounded-lg shadow-md mb-[10px]">
           <div className="p-4 flex flex-row justify-between items-center  ">
             <p className="lg:text-base  ">
               People you may know the Greater Bengaluru Area
@@ -56,7 +59,13 @@ function MyNetwork() {
             </p>
           </div>
 
-          {/* <Button label="Connect" icon={<img className="w-[16px] h-[16px]" src={connect} alt={connect}/>}/> */}
+          
+
+          <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 p-4 gap-y-2 items-center  w-full">
+            {[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2].map((item: any) => (
+              <Card />
+            ))}
+          </div>
         </div>
       </div>
     </div>
