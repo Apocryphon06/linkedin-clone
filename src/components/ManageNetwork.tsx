@@ -64,7 +64,7 @@ const network = [
 
 function ManageNetwork() {
   return (
-    <div className="w-[300px] bg-white rounded-lg shadow-md lg:block hidden">
+    <div className="lg:w-[300px] w-screen bg-white rounded-lg shadow-md ">
       <div className="p-4">
         <p className="text-base ">Manage my network</p>
       </div>

@@ -4,7 +4,6 @@ import repost from "../assets/icons/repost.svg";
 import comment from "../assets/icons/comment.svg";
 import thumbsup from "../assets/icons/thumbsup.svg";
 
-
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 function Feed() {
@@ -44,7 +43,8 @@ function Feed() {
             </p>
           </div>
           <img
-            src={`https://source.unsplash.com/random/?programming?id=${Math.random()*10}`}
+            // src={`https://source.unsplash.com/random/?programming?id=${Math.random()*10}`}
+            src={`https://picsum.photos/540/400?id=${Math.random() * 10}`}
             alt="feed_img"
           />
 

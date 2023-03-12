@@ -7,9 +7,10 @@ function Header() {
   const location = useLocation();
   console.log(location,'location url')
 
+  
   useEffect(()=>{
     setActive(location.pathname)
-  },[])
+  },[location.pathname])
   
 
   const SearchIcon = ({ size }: any) => {

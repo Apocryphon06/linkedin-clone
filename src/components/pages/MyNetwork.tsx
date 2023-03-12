@@ -2,12 +2,59 @@ import Button from "../Button";
 import ManageNetwork from "../ManageNetwork";
 import Card from "../Card";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import SubscribeCard from "../SubscribeCard";
+
+// import { Backdrop, Box, Modal } from "@mui/material";
+// import CloseIcon from "@mui/icons-material/Close";
+// // import upload from '../assets/images/upload_image.png'
+// import { useState } from "react";
+
+export const showToastMessage = (message: any, type: any) => {
+  type === "success" &&
+    toast.success(message, {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+  type === "info" &&
+    toast.info(message, {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+  type === "error" &&
+    toast.error(message, {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+};
+
 function MyNetwork() {
   return (
-    <div className="grid grid-flow-col items-start justify-center gap-[27px] m-auto lg:pt-[70px] pt-[50px]">
+    <div className="grid lg:grid-flow-col grid-flow-row items-start justify-center gap-[27px] m-auto lg:pt-[70px] pt-[50px]">
       <ManageNetwork />
 
-      <div className="lg:w-[790px] w-screen">
+      <div className="lg:w-[804px] w-screen">
         <div className="bg-white rounded-lg shadow-md">
           <div className="p-4 flex flex-row justify-between items-center  ">
             <p className="text-base">Invitations</p>
@@ -49,25 +96,48 @@ function MyNetwork() {
           ))}
         </div>
 
-        <div className="bg-white rounded-lg shadow-md mb-[10px]">
+        <div className="bg-white rounded-lg shadow-md my-[10px]">
           <div className="p-4 flex flex-row justify-between items-center  ">
             <p className="lg:text-base  ">
               People you may know the Greater Bengaluru Area
             </p>
-            <p className="lg:text-base   text-gray font-sansSemibold p-2 hover:bg-grayLight rounded-lg cursor-pointer">
+            <p className="lg:text-base text-sm text-gray font-sansSemibold p-2 hover:bg-grayLight rounded-lg cursor-pointer">
               See all
             </p>
           </div>
 
-          
-
-          <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 p-4 gap-y-2 items-center  w-full">
+          <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 p-4 lg:gap-y-[12px] md:gap-y-1 gap-y-[6px] relative lg:left-[5px] md:left-[3px]">
             {[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2].map((item: any) => (
               <Card />
             ))}
           </div>
+
+          <div className="p-4 flex flex-row justify-between items-center">
+            <p className="lg:text-base  ">Recommended newsletters for you</p>
+            <p className="lg:text-base text-sm text-gray font-sansSemibold p-2 hover:bg-grayLight rounded-lg cursor-pointer">
+              See all
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 p-4 lg:gap-y-2 md:gap-y-1 gap-y-[10px] ">
+            {[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2].map((item: any) => (
+              <SubscribeCard />
+            ))}
+          </div>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
