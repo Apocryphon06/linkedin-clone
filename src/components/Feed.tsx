@@ -43,6 +43,7 @@ function Feed() {
             </p>
           </div>
           <img
+            className="w-full"
             // src={`https://source.unsplash.com/random/?programming?id=${Math.random()*10}`}
             src={`https://picsum.photos/540/400?id=${Math.random() * 10}`}
             alt="feed_img"
