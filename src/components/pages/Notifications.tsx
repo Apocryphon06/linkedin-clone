@@ -63,7 +63,7 @@ function Notifications() {
         </p>
 
         <div className="flex justify-center items-center">
-          <button className="border border-linkedinBlue hover:bg-grayLight text-linkedinBlue rounded-[90px] w-[162px] h-[32px] text-base my-1">
+          <button className="border border-linkedinBlue hover:border-2 font-sansSemibold hover:border-linkedinBlue hover:bg-grayLight text-linkedinBlue rounded-[90px] w-[162px] h-[32px] text-base my-1">
             Follow
           </button>
         </div>
