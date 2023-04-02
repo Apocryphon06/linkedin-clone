@@ -22,7 +22,7 @@ function Notifications() {
           <div className="flex items-center gap-5 p-5 border-b border-grayLight hover:bg-grayLight cursor-pointer">
             <img
               className="w-[62px] h-[62px] rounded-full"
-              src="https://picsum.photos/200"
+              src={`https://picsum.photos/200?id=${Math.random() * 10}`}
               alt="connection_img"
             />
             <p className="text-sm">
@@ -47,12 +47,12 @@ function Notifications() {
         <div className="flex items-center gap-5 justify-center my-2">
           <img
             className="rounded-full w-[72px] h-[72px]"
-            src="https://picsum.photos/200"
+            src={`https://picsum.photos/200?id=${Math.random() * 10}`}
             alt="profile_"
           />
           <img
             className="rounded-full w-[72px] h-[72px]"
-            src="https://picsum.photos/200"
+            src={`https://picsum.photos/200?id=${Math.random() * 10}`}
             alt="vendor_"
           />
         </div>
