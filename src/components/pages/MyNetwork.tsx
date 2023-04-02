@@ -106,7 +106,7 @@ function MyNetwork() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 p-4 lg:gap-y-[12px] md:gap-y-1 gap-y-[6px] relative lg:left-[5px] md:left-[3px]">
+          <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 p-4 lg:gap-y-[12px] md:gap-y-1 gap-y-[6px] relative lg:left-[0px] md:left-[3px]">
             {[1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2].map((item: any) => (
               <Card />
             ))}

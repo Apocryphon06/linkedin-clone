@@ -18,7 +18,9 @@ function SubscribeCard() {
       {/* profile pic */}
       <div className="relative top-[-40px] flex flex-row items-center left-[10px]">
         <img
-          src={`https://loremflickr.com/200/200?id=${Math.random() * 10}`}
+          // src={`https://loremflickr.com/200/200?id=${Math.random() * 10}`}
+        src={`https://picsum.photos/200?id=${Math.random() * 10}`}
+
           alt="logo_image"
           className="w-[90px] h-[90px]  border-2 border-white"
         />
