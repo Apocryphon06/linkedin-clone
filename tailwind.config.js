@@ -1,25 +1,43 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
-    extend: {
+    screens: {
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
 
-      fontFamily: {
-        sansRegular: ['OpenSans Regular'],
-        sansMedium: ['OpenSans Medium'],
-        sansBold: ['OpenSans Bold'],
-        sansExtrabold: ['OpenSans ExtraBold'],
-        sansSemibold:['OpenSans Semibold'],
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+
+      '3xl': '1920px',
+      // => @media (min-width: 1920px) { ... }
+    },
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        linkedinBlue: '#0A66C2',
-        gray: '#666666',
-        lightBlue: '#70B5F9',
-        lightGreen: '#7FC15E',
-        lightBrown: '#915907',
-        lightOrange: '#E7A33E',
-        lightRed: '#F5987E',
-        grayLight:'#EEF3F7'
+        primaryBlue: '#0A66C2',
+        primaryBlueDark: '#004182',
+        darkRed: '#B24020',
+        secondary: '#808080',
+        primaryDark: '#090909',
+        warningRed: '#CF0007',
       },
     },
   },
