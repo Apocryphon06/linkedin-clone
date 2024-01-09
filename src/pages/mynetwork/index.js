@@ -17,7 +17,6 @@ const MyNetwork = () => {
           start: '-48px top',
           endTrigger: '.end-nw-pin',
           end: 'bottom bottom',
-          markers: true,
           pin: '.nw-left-section-pin',
         },
       })
@@ -31,14 +30,17 @@ const MyNetwork = () => {
       <div className="pt-12" />
 
       <Layout>
-        <div className="flex lg:flex-row items-start min-h-screen lg:gap-x-6 pt-6 nw-container">
+        <div className="flex lg:flex-row items-start min-h-screen pt-6 nw-container">
           <div className="w-[30%] bg-white h-[85vh] nw-left-section-pin flex-shrink-0 p-4 rounded-lg flex flex-col items-start justify-end">
             <FooterContent />
           </div>
 
-          <div className="w-[70%] h-full flex-shrink-0 flex flex-col gap-6">
+          <div className="w-[70%] h-full flex-shrink-0 flex flex-col gap-6 pl-6">
             <div className="w-full bg-[#808080] h-[400px] flex-shrink-0 rounded-lg"></div>
 
+            <div className="w-full bg-[#808080] h-[400px] flex-shrink-0 rounded-lg"></div>
+            <div className="w-full bg-[#808080] h-[400px] flex-shrink-0 rounded-lg"></div>
+            <div className="w-full bg-[#808080] h-[400px] flex-shrink-0 rounded-lg"></div>
             <div className="w-full bg-[#808080] h-[400px] flex-shrink-0 rounded-lg"></div>
 
             <div className="w-full bg-[#808080] h-[400px] flex-shrink-0 rounded-lg end-nw-pin"></div>

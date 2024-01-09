@@ -10,12 +10,12 @@ const Messaging = () => {
     <Fragment>
       {Router.pathname !== '/' && (
         <div
-          className={`w-3/12 bg-cyan-100 ${
-            !menu ? 'h-14' : 'h-[80vh]'
+          className={`w-[20%] bg-[#808080] ${
+            !menu ? 'h-12' : 'h-[80vh]'
           } fixed bottom-0 right-2 rounded-tl-lg transition-all ease-linear duration-100 rounded-tr-lg flex items-start justify-center p-4`}
         >
           <div className="flex items-center w-full justify-between">
-            <p className="text-base font-medium">Messagining</p>
+            <p className="text-sm font-medium">Messagining</p>
 
             <div className="flex items-center gap-6">
               <button>

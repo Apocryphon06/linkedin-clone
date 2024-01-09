@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${inter.className} relative`}>
+    <main className={`${inter.className} relative bg-[#f4f2ee]`}>
       <Header />
       <Component {...pageProps} />
 

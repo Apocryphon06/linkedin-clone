@@ -8,7 +8,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Messaging from '@/components/Messaging'
 import FooterContent from '@/components/FooterContent'
 
-const Home = () => {
+const Profile = () => {
   const [length, setLength] = useState(10)
 
   useEffect(() => {
@@ -29,33 +29,18 @@ const Home = () => {
     return () => ctx.revert()
   }, [length])
 
-  // const [menu, setMenu] = useState(false)
-
-  //   useEffect(() => {
-  //     let interval = setInterval(() => {
-  //       setLength((length) => length + 1)
-  //     }, 1500)
-
-  //     return () => clearInterval(interval)
-  //   }, [length])
-
   return (
     <div className="relative">
       <div className="mt-12" />
       <Layout>
         <div className="flex lg:flex-row items-start w-full lg:pt-6 pt-5 hp-container">
-          <div className="pin-left min-h-screen w-[25%] flex flex-col gap-2 pr-6">
-            <div className="bg-[#606060] w-full h-[60vh] rounded-lg">
-              {length}
-            </div>
-            <div className="bg-[#606060] w-full h-[40vh] rounded-lg"></div>
-          </div>
+      
 
-          <div className="w-[45%] mx-auto flex flex-col gap-2">
+          <div className="w-[70%] mx-auto flex flex-col gap-2">
             {React.Children.toArray(
               [...Array(length).keys()].map((item, index) => (
                 <div
-                  className={`bg-[#505050] h-[90vh] rounded-lg ${
+                  className={`bg-[#505050] h-[500px] rounded-lg ${
                     index === 9 ? `end-trigger-${index}` : ''
                   }`}
                 ></div>
@@ -83,4 +68,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Profile
