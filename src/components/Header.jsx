@@ -6,7 +6,7 @@ const data = [
 
   {
     name:'Home',
-    link:'/hp'
+    link:'/feed'
   },
 
   {
@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      {Router.pathname !== '/' && (
+      {Router.pathname !== '/test' && (
         <div className="h-12 bg-[#222222] text-white w-full flex items-center justify-between lg:px-40 md:px-6 px-4 fixed top-0 z-[98]">
           <p className='text-lg font-medium'>Header</p>
           <div className="flex items-center gap-10">

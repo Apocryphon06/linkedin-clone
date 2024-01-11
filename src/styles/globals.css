@@ -5,3 +5,8 @@
 .debug {
   @apply border border-red-500;
 }
+
+
+.container-rounded {
+  @apply border border-black/[15%] rounded-lg bg-white w-full p-3
+}
