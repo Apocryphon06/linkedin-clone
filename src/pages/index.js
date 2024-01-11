@@ -88,7 +88,7 @@ const Home = () => {
         <div className="mt-6 lg:w-4/12 w-full relative">
           <div className="border border-[#202020]/20 w-full" />
           <div className="w-full h-full absolute top-0 flex items-center justify-center">
-            <p className="bg-white px-3 3xl:text-base text-sm text-primaryDark">
+            <p className="bg-[#f4f2ee] px-3 3xl:text-base text-sm text-primaryDark">
               or
             </p>
           </div>
