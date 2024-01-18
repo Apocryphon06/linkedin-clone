@@ -5,6 +5,7 @@ import gsap from 'gsap/dist/gsap'
 import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import FooterContent from '@/components/FooterContent'
+import { useSelector } from 'react-redux'
 
 const Home = () => {
   const [length, setLength] = useState(10)
@@ -37,6 +38,9 @@ const Home = () => {
   //     return () => clearInterval(interval)
   //   }, [length])
 
+  const count = useSelector(state => state.counter)
+  console.log(count, 'value from store')
+
   return (
     <div className="relative">
       <div className="mt-12" />
@@ -53,9 +57,8 @@ const Home = () => {
             {React.Children.toArray(
               [...Array(length).keys()].map((item, index) => (
                 <div
-                  className={`bg-[#505050] h-[90vh] rounded-lg ${
-                    index === 9 ? `end-trigger-${index}` : ''
-                  }`}
+                  className={`bg-[#505050] h-[90vh] rounded-lg ${index === 9 ? `end-trigger-${index}` : ''
+                    }`}
                 ></div>
               )),
             )}
