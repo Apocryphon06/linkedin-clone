@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import PageNotFound from "./components/PageNotFound";
@@ -10,13 +10,13 @@ import Notifications from "./components/pages/Notifications";
 
 function App() {
   return (
-    <div>
+    <Fragment>
+      <Header />
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Header />
               <Home />
             </>
           }
@@ -25,7 +25,6 @@ function App() {
           path="/mynetwork"
           element={
             <>
-              <Header />
               <MyNetwork />
             </>
           }
@@ -34,7 +33,6 @@ function App() {
           path="/jobs"
           element={
             <>
-              <Header />
               <Jobs />
             </>
           }
@@ -43,7 +41,6 @@ function App() {
           path="/messages"
           element={
             <>
-              <Header />
               <Messages />
             </>
           }
@@ -52,14 +49,13 @@ function App() {
           path="/notifications"
           element={
             <>
-              <Header />
               <Notifications />
             </>
           }
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </div>
+    </Fragment>
   );
 }
 
