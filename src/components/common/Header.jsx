@@ -41,18 +41,19 @@ const Header = () => {
 
     return (
         <Fragment>
-            <div className='w-full bg-white fixed top-0 left-0 z-20 h-12'>
-                <div className='lg:w-10/12 mx-auto flex items-center justify-between h-12'>
-                    <div className='flex items-center gap-2 lg:w-4/12'>
+            <div className='w-full bg-white fixed top-0 left-0 z-20 lg:h-12 h-14'>
+                <div className='lg:w-10/12 mx-auto flex items-center justify-between lg:h-12 h-14 lg:px-0 px-4'>
+
+                    <div className='flex items-center gap-2 lg:w-4/12 w-full'>
                         <FaLinkedin className='w-10 h-10' color='#0A66C2' />
 
-                        <div className='flex items-center h-9 px-4 bg-blueHover text-[#666666] rounded-md gap-2 w-full'>
+                        <div className='flex items-center h-9 px-2 lg:px-4 bg-blueHover text-[#666666] rounded-md gap-2 w-full'>
                             <IoSearch className="w-5 h-5" color="#666666" />
-                            <input placeholder='Search' className='outline-none text-sm w-full bg-transparent' />
+                            <input placeholder='Search' className='outline-none text-sm w-full bg-transparent text-[#121212] placeholder:text-[#666666]' />
                         </div>
                     </div>
 
-                    <div className='flex items-center lg:w-6/12 justify-end h-full'>
+                    <div className='lg:flex hidden items-center lg:w-6/12 justify-end h-full'>
                         {
                             React.Children.toArray(
                                 menu_items?.map(item => (
@@ -78,6 +79,30 @@ const Header = () => {
             </div>
 
             <div className='mt-12' />
+
+            <div className='lg:hidden flex items-center w-full justify-between fixed bottom-0 left-0 bg-white h-14'>
+                <div className='grid grid-cols-5 w-full'>
+                    {
+                        React.Children.toArray(
+                            menu_items?.map(item => (
+                                <div
+                                    onClick={() => {
+                                        Router.push(item.link)
+                                    }}
+                                    className={`flex flex-col decoration-backgroundShade cursor-pointer items-center justify-center text-center h-full ${pathname === item.link ? ' opacity-1' : 'border-b-2 border-transparent opacity-60'}`}>
+                                    <img
+                                        src={item?.icon}
+                                        alt={item?.icon}
+                                        className='w-5 h-5'
+                                    />
+                                    <p className='text-xs'>{item?.name}</p>
+                                </div>
+                            ))
+                        )
+                    }
+                </div>
+
+            </div>
 
         </Fragment>
     )
